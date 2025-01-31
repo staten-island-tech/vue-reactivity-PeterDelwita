@@ -12,6 +12,7 @@ defineProps({
 })
 // Images go in public folder
 // Put character cards in container
+// Use Tailwind for this project
 </script>
 
 <style scoped></style>
