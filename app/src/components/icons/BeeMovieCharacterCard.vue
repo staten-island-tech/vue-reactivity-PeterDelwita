@@ -1,9 +1,17 @@
 <template>
-  <div></div>
+  <div>
+    <h2>{{ character.name }}</h2>
+    <h3>{{ character.role }}</h3>
+    <h3>{{ character.price }}</h3>
+  </div>
 </template>
 
 <script setup>
-// Images go in the public folder
+defineProps({
+  character: Object,
+})
+// Images go in public folder
+// Put character cards in container
 </script>
 
 <style scoped></style>

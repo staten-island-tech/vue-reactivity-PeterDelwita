@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+import CharacterCard from '../components/icons/BeeMovieCharacterCard.vue'
+</script>
 
 <template>
   <main>
