@@ -1,4 +1,4 @@
-const beeMovieCharacters = [
+const characters = [
   {
     name: 'Barry B. Benson',
     role: 'Main protagonist, a bee who sues the human race.',
