@@ -70,3 +70,5 @@ const characters = [
     price: '$16.00',
   },
 ]
+
+export default characters // Have something like this to export JS files!!

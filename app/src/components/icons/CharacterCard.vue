@@ -1,8 +1,13 @@
 <template>
-  <div class="card w-[30%] flex flex-wrap border-solid border-black">
-    <h2>{{ character.name }}</h2>
-    <h3>{{ character.role }}</h3>
-    <h3>{{ character.price }}</h3>
+  <div
+    class="card w-[30%] flex flex-wrap border-solid border-2 rounded-2xl border-black bg-yellow-400 justify-center"
+  >
+    <!--Fix the cards here...-->
+    <div class="text-center">
+      <h2 class="text-[16px]">{{ character.name }}</h2>
+      <h3>{{ character.role }}</h3>
+      <h3>{{ character.price }}</h3>
+    </div>
   </div>
 </template>
 
