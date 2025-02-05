@@ -1,6 +1,7 @@
 <script setup>
 import CharacterCard from '../components/icons/CharacterCard.vue'
 import characters from '../assets/BeeMovieCharacters.js'
+import { ref, reactive } from 'vue'
 
 // Example 1:
 // ItemsArr
@@ -36,13 +37,18 @@ import characters from '../assets/BeeMovieCharacters.js'
 // Step 5: Show the cart
 // Step 6: Calculate the cost; use reactive
 // Step 7: Remove or clear the cart
+const cart = reactive['']
+// We want the button on the object to add it to the cart. Cart should be an array; pressing the button should add the button to the array.
 </script>
 
 <template>
-  <main>
-    <h1 class="text-3xl font-bold underline text-center text-[32px] mb-2">
-      Big Bzzzzness, by Barry B. Benson
-    </h1>
+  <main class="bg-black">
+    <div class="header-container w-full flex flex-wrap justify-center object-contain bg-gray-900">
+      <h1 class="header font-bold underline text-center text-[64px] text-yellow-400 mb-2">
+        Big Bzzzzness, by Barry B. Benson
+      </h1>
+    </div>
+
     <!--Bee Movie dating app!!!-->
     <!--What do I want to be my components?-->
     <!--Cards of Bee Movie characters should be a component (a dating app?) along with a heading introducing the site and cards for the shopping cart. (Shopping cart should also be a component?)-->

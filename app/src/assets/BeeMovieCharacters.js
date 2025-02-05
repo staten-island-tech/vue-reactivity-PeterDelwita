@@ -1,7 +1,7 @@
 const characters = [
   {
     name: 'Barry B. Benson',
-    role: 'Main protagonist, a bee who sues the human race.',
+    role: 'ya like jazz? ya like jazz? ya like jazz? ya like jazz?',
     price: '$10.00',
   },
   {
@@ -11,7 +11,7 @@ const characters = [
   },
   {
     name: 'Ken',
-    role: "Vanessa's boyfriend, who is suspicious of Barry.",
+    role: 'WHY IS YOGURT NIGHT SO DIFFICULT',
     price: '$8.00',
   },
   {
