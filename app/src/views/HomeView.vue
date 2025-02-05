@@ -40,12 +40,14 @@ import characters from '../assets/BeeMovieCharacters.js'
 
 <template>
   <main>
-    <h1 class="text-3xl font-bold underline text-center">Big Bzzzzness, by Barry B. Benson</h1>
+    <h1 class="text-3xl font-bold underline text-center text-[32px] mb-2">
+      Big Bzzzzness, by Barry B. Benson
+    </h1>
     <!--Bee Movie dating app!!!-->
     <!--What do I want to be my components?-->
     <!--Cards of Bee Movie characters should be a component (a dating app?) along with a heading introducing the site and cards for the shopping cart. (Shopping cart should also be a component?)-->
     <!--File will be big -->
-    <div class="container w-full flex flex-wrap justify-center">
+    <div class="container flex flex-wrap justify-center p-3">
       <CharacterCard
         v-for="character in characters"
         :key="character.name"
