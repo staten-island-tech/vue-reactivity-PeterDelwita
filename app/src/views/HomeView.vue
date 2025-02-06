@@ -1,6 +1,7 @@
 <script setup>
 import CharacterCard from '../components/icons/CharacterCard.vue'
 import characters from '../assets/BeeMovieCharacters.js'
+import cart from '../components/icons/CharacterCard.vue'
 import { ref, reactive } from 'vue'
 
 // Example 1:
@@ -44,7 +45,7 @@ import { ref, reactive } from 'vue'
   <main class="bg-black">
     <div class="header-container w-full flex flex-wrap justify-center object-contain bg-gray-900">
       <h1 class="header font-bold underline text-center text-[64px] text-yellow-400 mb-2">
-        Big Bzzzzness, by Barry B. Benson
+        Barry B. Benson's small bzzzzzness
       </h1>
     </div>
 
@@ -52,12 +53,16 @@ import { ref, reactive } from 'vue'
     <!--What do I want to be my components?-->
     <!--Cards of Bee Movie characters should be a component (a dating app?) along with a heading introducing the site and cards for the shopping cart. (Shopping cart should also be a component?)-->
     <!--File will be big -->
-    <div class="container flex flex-wrap justify-center p-3">
+    <div class="container w-[70%] flex flex-wrap justify-center p-3">
       <CharacterCard
         v-for="character in characters"
         :key="character.name"
         :character="character"
       ></CharacterCard>
+    </div>
+    <div class="cart-container w-[30%] h-full bg-gray-900 flex flex-wrap justify-start align-top">
+      <!-- Supposed to show the cart-->
+      <ShoppingCartCards v-for="item in cart" :key="item.name" :item="item"></ShoppingCartCards>
     </div>
   </main>
 </template>

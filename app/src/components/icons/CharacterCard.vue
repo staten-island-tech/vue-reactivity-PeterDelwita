@@ -11,7 +11,7 @@
         @click="addToCart"
         class="text-[18px] text-yellow-400 border-solid border-2 border-yellow-400 bg-black rounded-2xl"
       >
-        Date!!
+        Buy
       </button>
     </div>
   </div>
@@ -23,12 +23,14 @@ const props = defineProps({
   character: Object,
 })
 
+const item = {
+  name: props.character.name,
+  price: props.character.price,
+}
+
 const cart = reactive([])
 function addToCart() {
-  cart.push({
-    name: props.character.name,
-    price: props.character.price,
-  })
+  cart.push(item)
   console.log(cart)
 }
 
