@@ -30,14 +30,13 @@ import { ref, reactive } from 'vue'
 
 // My Project
 // Step 1: Character Array (done!)
-// Step 2: Show Characters on Screen (worry about images later)
-// Step 2.5: Fix cards
-// Step 3: "Cart" Array
-// Step 4: Add to cart
+// Step 2: Show Characters on Screen (worry about images later) (done)
+// Step 2.5: Fix cards (done)
+// Step 3: "Cart" Array (done)
+// Step 4: Add to cart (done)
 // Step 5: Show the cart
 // Step 6: Calculate the cost; use reactive
-// Step 7: Remove or clear the cart
-const cart = reactive['']
+// Step 7: Remove or clear the cart (by clearing array)
 // We want the button on the object to add it to the cart. Cart should be an array; pressing the button should add the button to the array.
 </script>
 
