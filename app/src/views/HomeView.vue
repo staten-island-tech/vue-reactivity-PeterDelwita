@@ -53,16 +53,19 @@ import { ref, reactive } from 'vue'
     <!--What do I want to be my components?-->
     <!--Cards of Bee Movie characters should be a component (a dating app?) along with a heading introducing the site and cards for the shopping cart. (Shopping cart should also be a component?)-->
     <!--File will be big -->
-    <div class="container w-[70%] flex flex-wrap justify-center p-3">
-      <CharacterCard
-        v-for="character in characters"
-        :key="character.name"
-        :character="character"
-      ></CharacterCard>
-    </div>
-    <div class="cart-container w-[30%] h-full bg-gray-900 flex flex-wrap justify-start align-top">
-      <!-- Supposed to show the cart-->
-      <ShoppingCartCards v-for="item in cart" :key="item.name" :item="item"></ShoppingCartCards>
+    <div class="container w-full flex flex-wrap justify-start">
+      <div class="container w-[70%] flex flex-wrap justify-center p-2">
+        <CharacterCard
+          v-for="character in characters"
+          :key="character.name"
+          :character="character"
+        ></CharacterCard>
+      </div>
+      <div class="cart-container w-[30%] h-full bg-gray-900 flex flex-wrap justify-start align-top">
+        <!-- Supposed to show the cart-->
+        <h2 class="text-[16px] text-yellow-400">Your Cart</h2>
+        <ShoppingCartCards v-for="item in cart" :key="item.name" :item="item"></ShoppingCartCards>
+      </div>
     </div>
   </main>
 </template>
