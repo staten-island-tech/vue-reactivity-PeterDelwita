@@ -53,17 +53,19 @@ import { ref, reactive } from 'vue'
     <!--What do I want to be my components?-->
     <!--Cards of Bee Movie characters should be a component (a dating app?) along with a heading introducing the site and cards for the shopping cart. (Shopping cart should also be a component?)-->
     <!--File will be big -->
-    <div class="container w-full flex flex-wrap justify-start">
-      <div class="container w-[70%] flex flex-wrap justify-center p-2">
+    <div class="thing-container w-full flex flex-wrap justify-start">
+      <!--Doesn't cover whole screen for whatever reason-->
+      <div class="card-container w-[70%] flex flex-wrap justify-center p-2">
         <CharacterCard
           v-for="character in characters"
           :key="character.name"
           :character="character"
         ></CharacterCard>
       </div>
-      <div class="cart-container w-[30%] h-full bg-gray-900 flex flex-wrap justify-start align-top">
+      <div class="cart-container w-[30%] h-dvh bg-gray-900 flex flex-wrap justify-center align-top">
         <!-- Supposed to show the cart-->
-        <h2 class="text-[16px] text-yellow-400">Your Cart</h2>
+        <h2 class="text-[32px] font-medium text-center text-yellow-400">Your Cart</h2>
+        <!--Why don't I try reusing CharacterCard in the cart?? See what happens (need to figure out costs)-->
         <ShoppingCartCards v-for="item in cart" :key="item.name" :item="item"></ShoppingCartCards>
       </div>
     </div>

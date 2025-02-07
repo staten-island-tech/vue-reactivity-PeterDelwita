@@ -24,6 +24,7 @@ const props = defineProps({
 })
 
 const item = {
+  // Pass this as a parameter in ShoppingCartCards? (or maybe just use CharacterCard in HomeView)
   name: props.character.name,
   price: props.character.price,
 }
