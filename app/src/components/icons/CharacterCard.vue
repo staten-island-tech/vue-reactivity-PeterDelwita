@@ -27,12 +27,7 @@ const item = {
   // Pass this as a parameter in ShoppingCartCards? (or maybe just use CharacterCard in HomeView)
   name: props.character.name,
   price: props.character.price,
-}
-
-const cart = reactive([])
-function addToCart() {
-  cart.push(item)
-  console.log(cart)
+  // insertAdjacentHTML doesn't trigger Vue's reactivity, so Vue doesn't track or update changes if we use it. What can we do instead?
 }
 
 // Images go in public folder
