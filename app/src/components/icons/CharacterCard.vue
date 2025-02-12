@@ -1,6 +1,6 @@
 <template>
   <div
-    class="card w-[30%] flex border-solid border-2 rounded-2xl border-yellow-400 bg-black justify-center items-center m-2 p-2"
+    class="card w-[30%] max-[600px]:w-[70%] flex border-solid border-2 rounded-2xl border-yellow-400 bg-black justify-center items-center m-2 p-2"
   >
     <!--Fix the cards here...-->
     <div class="text-center">

@@ -2,11 +2,11 @@
 import CharacterCard from '../components/icons/CharacterCard.vue'
 import characters from '../assets/BeeMovieCharacters.js'
 const cart = reactive([])
-function addToCart() {
-  cart.push(CharacterCard) // Figure out what to push
+// function addToCart() {
+//   cart.push(character) // Figure out what to push
 
-  console.log(cart)
-}
+//   console.log(cart)
+// }
 import { ref, reactive } from 'vue'
 
 // Example 1:
@@ -65,15 +65,23 @@ import { ref, reactive } from 'vue'
           v-for="character in characters"
           :key="character.name"
           :character="character"
-          @click="addToCart"
+          @click="cart.push(character)"
         ></CharacterCard>
         <!-- Says CHARACTER, not item-->
       </div>
       <div class="cart-container w-[30%] h-dvh bg-gray-900 flex flex-wrap justify-center align-top">
         <!-- Supposed to show the cart-->
-        <h2 class="text-[32px] font-medium text-center text-yellow-400">Your Cart</h2>
+        <div class="cart-header-container w-full flex flex-wrap justify-center">
+          <h2 class="text-[32px] font-medium text-center text-yellow-400">Your Cart</h2>
+        </div>
+
         <!--Why don't I try reusing CharacterCard in the cart?? See what happens (need to figure out costs)-->
         <!-- <ShoppingCartCards v-for="item in cart" :key="item.name" :item="item"></ShoppingCartCards> -->
+        <CharacterCard
+          v-for="character in cart"
+          :key="character.name"
+          :character="character"
+        ></CharacterCard>
       </div>
     </div>
   </main>
