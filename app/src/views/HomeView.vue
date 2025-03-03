@@ -1,7 +1,8 @@
 <script setup>
 import CharacterCard from '../components/icons/CharacterCard.vue'
 import characters from '../assets/BeeMovieCharacters.js'
-let cart = reactive([])
+import ShoppingCartCards from '../components/icons/ShoppingCartCards.vue'
+const cart = reactive([])
 
 function addToCart(object, price) {
   cart.push(object) // Figure out what to push
@@ -12,9 +13,13 @@ import { ref, reactive } from 'vue'
 let totalCost = ref(0)
 
 function clearCart() {
-  cart = reactive([])
+  cart.splice(0, cart.length)
   totalCost.value = 0
 }
+// To do (resubmission):
+// Remove buttons from items in cart
+// Make cart const, do cart value
+
 // Example 1:
 // ItemsArr
 // Put items on Screen
@@ -61,7 +66,6 @@ function clearCart() {
     </div>
 
     <div class="thing-container w-full flex flex-wrap justify-start">
-      <!--Doesn't cover whole screen for whatever reason-->
       <div class="card-container w-[70%] flex flex-wrap justify-center p-2">
         <CharacterCard
           v-for="character in characters"
@@ -92,11 +96,11 @@ function clearCart() {
         </div>
 
         <div class="product-container w-full flex flex-wrap justify-center">
-          <CharacterCard
+          <ShoppingCartCards
             v-for="character in cart"
             :key="character.name"
             :character="character"
-          ></CharacterCard>
+          ></ShoppingCartCards>
         </div>
       </div>
     </div>
