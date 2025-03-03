@@ -16,9 +16,6 @@ function clearCart() {
   cart.splice(0, cart.length)
   totalCost.value = 0
 }
-// To do (resubmission):
-// Remove buttons from items in cart
-// Make cart const, do cart value
 
 // Example 1:
 // ItemsArr
